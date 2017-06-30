@@ -1,4 +1,4 @@
-FROM grafana/grafana:4.2.0
+FROM grafana/grafana:4.3.2
 
 RUN apt-get update && apt-get install -y curl
 
@@ -10,11 +10,11 @@ ARG "commit_hash=unknown"
 ARG "vcs_url=unknown"
 ARG "vcs_branch=unknown"
 
-LABEL org.label-schema.vendor="basi" \
+LABEL org.label-schema.vendor="tobernguyen" \
     org.label-schema.name="Grafana" \
     org.label-schema.description="Grafana with some limited automated data sources creation" \
     org.label-schema.usage="/README.md" \
-    org.label-schema.url="https://github.com/bvis/docker-grafana/blob/master/README.md" \
+    org.label-schema.url="https://github.com/tobernguyen/docker-grafana/blob/master/README.md" \
     org.label-schema.vcs-url=$vcs_url \
     org.label-schema.vcs-branch=$vcs_branch \
     org.label-schema.vcs-ref=$commit_hash \
